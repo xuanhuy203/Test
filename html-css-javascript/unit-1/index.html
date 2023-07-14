@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Dark Mode</title>
+    <link rel="stylesheet" href="../unit-1/style.css">
+    <link rel="stylesheet" href="../unit-2/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../unit-2/main.js"></script>
+</head>
+<body>
+    <!-- Phần Header -->
+    <header>
+        <div class="logo hide"></div>
+        <div class="header__wrapper-nav-icons" id="header__wrapper-nav-icons">
+            <div>
+                <nav id="menu-main">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Tech Stack</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a id="open-popup" onclick="openPopupButton()"  href="#">Contact</a></li><!--nút để kích hoạt popup-->
+                    </ul>
+                </nav>
+            </div>
+            <div onclick="hideLogoIcons()" class="menu-responsive">
+                <div class="stroke"></div>
+                <div class="stroke"></div>
+                <div class="stroke"></div>
+            </div>
+            <div class="header-icons hide">
+                <img id="icon" src="./img/icon-git.svg" alt="">
+                <img id="icon" src="./img/ant-design_twitter-circle-filled.svg" alt="">
+                <img id="icon" src="./img/entypo-social_linkedin-with-circle.svg" alt="">
+            </div>
+        </div>
+    </header>
+    <!--Popup-->
+    <div class="container-popup" id="container-popup" onsubmit="return validateForm()"><!--Chứa all popup-->
+        <span class="close-popup" id="close-popup"><i onclick="closePopupButton()"
+                class="fa-solid fa-x"></i>
+        </span><!--nút X đóng popup-->
+        <div class="content-popup" style="color: aliceblue;"><!--Nội dung popup: chứa forms, input, .... tuỳ chỉnh-->
+            <form class="form-contact" name="form" onblur="return validateForm()">
+                <div style="text-align: center; font-size: 22px; font-weight: bold; color: #191919; margin: 5% auto 0 auto;">
+                    Infomation
+                </div>
+                <div class="contain firstName" id="firstNameItem">
+                    <label for="firstName">First Name <span id="isRequired">(*)</span> :</label>
+                    <input type="text" id="firstName" maxlength="10">
+                </div>
+                <div class="contain lastName" id="lastNameItem">
+                    <label for="lastName">Last Name <span id="isRequired">(*)</span> :</label>
+                    <input type="text" id="lastName" maxlength="10">
+                </div>
+                <div class="contain gender">
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option><!--Nam-->
+                        <option value="feMale">FeMale</option><!--Nữ-->
+                    </select>
+                </div>
+                <div class="contain tel">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" maxlength="11">
+                </div>
+                <div class="contain address">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" maxlength="50">
+                </div>
+                <div class="contain email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" maxlength="30">
+                </div>
+                <div class="contain__btn-submit">
+                    <button onclick="validateForm()" class="btnSubmit" id="btnSubmit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Phần content -->
+    <section class="banner">
+        <div class="banner__intro">
+            Hi 👋,<br>
+            My name is
+            <span class="intro__text-color-gradient">Pavan MG</span>
+            I build things for web</div>
+        <div class="banner__avt--border-gradient">
+            <img src="./img/avt.png" alt="">
+        </div>
+    </section>
+    <section class="my-tech-stack">
+        <div class="my-tech-stack__title">My Tech Stack</div>
+        <div class="my-tech-stack__sumary">Technologies I’ve been working with recently</div>
+        <div class="my-tech-stack__icons">
+            <img src="./img/vscode-icons_file-type-html.svg" alt="">
+            <img src="./img/vscode-icons_file-type-css.svg" alt="">
+            <img src="./img/vscode-icons_file-type-js-official.svg" alt="">
+            <img src="./img/logos_react.svg" alt="">
+            <img src="./img/Vector.png" alt="">
+            <img src="./img/logos_bootstrap.svg" alt="">
+            <img src="./img/vscode-icons_file-type-tailwind.svg" alt="">
+            <img src="./img/logos_sass.svg" alt="">
+            <img src="./img/logos_git-icon.svg" alt="">
+            <img id="responsive" src="./img/cib_greensock.svg" alt="">
+            <img src="./img/vscode-icons_file-type-vscode.svg" alt="">
+            <img style="background: var(--dark-mode, #191919);" src="./img/akar-icons_github-fill.svg" alt="">
+        </div>
+    </section>
+    <section class="projects">
+        <div>Projects</div>
+        <div class="projects__slogan">CopyThings I’ve built so far</div>
+        <div class="container__projects">
+            <div class="project">
+                <div style="background-image: url('./img/project__img-1.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div style="background-image: url('./img/project__img-2.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div style="background-image: url('./img/project__img-3.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div style="background-image: url('./img/project__img-4.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div style="background-image: url('./img/project__img-5.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div style="background-image: url('./img/project__img-6.png');" class="project__img--detail"></div>
+                <div class="project__info">
+                    <h3 class="project__name">Project Tile goes here</h3>
+                    <p>
+                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content                        </p>
+                    <div class="tech-stack">Tech stack :<span> HTML , JavaScript, SASS, React</span></div>
+                    <div class="project__info--views">
+                        <div class="views">
+                            <img src="./img/akar-icons_link-chain.png" alt="">
+                            <span>Live Preview</span>
+                        </div>
+                        <div style="margin-left: 10%;" class="views">
+                            <img src="./img/akar-icons_github-fill.svg" alt="">
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__logo-contact-icons">
+            <div class="footer__logo"></div>
+            <div class="footer__contacts">
+                <div>+91 12345 09876</div>
+                <div>info@example.com</div>
+                <div class="footer__icons">
+                    <img src="./img/icon-git.svg" alt="">
+                    <img src="./img/ant-design_twitter-circle-filled.svg" alt="">
+                    <img src="./img/entypo-social_linkedin-with-circle.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer__stroke"></div>
+        <div class="footer__nav-author">
+            <nav class="footer__nav">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">About</a></div>
+                <div><a href="#">Technologies</a></div>
+                <div><a href="#">Project</a></div>
+                <div><a href="#">Contact</a></div>
+            </nav>
+            <div class="footer__author">
+                Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

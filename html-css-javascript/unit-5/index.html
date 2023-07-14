@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuân Huy</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../unit-5/assets/styles/styles.css">
+    <!-- Link Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link icons themifyicons -->
+    <link rel="stylesheet" href="../unit-5/assets/images/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <header>
+        <section id="sub-nav">
+            <div class="container__sub-nav">
+                <div><a href="#">về Xuân Huy</a></div>
+                <div><a href="#">Tuyển dụng</a></div>
+                <div><a href="#">Email</a></div>
+                <div><a href="#">Lịch công tác</a></div>
+                <div><a href="#">Liên hệ</a></div>
+                <div class="btn-search " id="search">
+                    <span ><i id="iconSearch" class="fa-solid fa-magnifying-glass"></i></span>
+                    <input class="search hide" id="inputSearch" placeholder="Tìm Kiếm ..."></input>
+                    <span id="btn__close-input" style="cursor: pointer;">x</span>
+                </div>
+            </div>
+        </section>
+        <section id="nav-main">
+            <div class="nav-main__logo"><a href="./index.html"><img src="./assets/images/logo.png" alt=""></a></div>
+            <nav id="navigation">
+                <div class="label"><a href="#">Chương trình đào tạo</a><i class="fa-solid fa-angle-down"></i>
+                    <ul class="navigation-child">
+                        <li><a href="#">Đào tạo chính quy</a></li>
+                        <li><a href="#">Kĩ sư chuyên sâu đặc thù</a></li>
+                        <li><a href="#">Thạc sĩ</a></li>
+                        <li><a href="#">Tiến sĩ</a></li>
+                        <li><a href="#">Tra cứu văn bằng</a></li>
+                    </ul>
+                </div>
+                <div><a href="#">Sự kiện nổi bật</a><i class="fa-solid fa-angle-down"></i>
+                    <ul class="navigation-child">
+                        <li><a href="#">Thông báo chung</a></li>
+                        <li><a href="#">Tuyển sinh-Đào tạo-Công tác sinh viên</a></li>
+                        <li><a href="#">Hợp tác-Đối ngoại-Truyền thông</a></li>
+                        <li><a href="#">Tổ chức nhân sự - Tuyển dụng</a></li>
+                        <li><a href="#">Sự kiện sắp diễn ra</a></li>
+                    </ul>
+                </div>
+                <div><a href="#">Sinh viên</a><i class="fa-solid fa-angle-down"></i>
+                    <ul class="navigation-child">
+                        <li id="openTable__student-list"><a href="#goto__ms">Quản Lý Sinh Viên</a></li>
+                        <li><a href="#">Tra cứu lịch học</a></li>
+                        <li><a href="#">Thông tin cá nhân</a></li>
+                        <li><a href="#">Học bổng</a></li>
+                        <li><a href="#">Học phí</a></li>
+                    </ul>
+                </div>
+                <div class="label"><a href="#">Nghiên cứu</a><i class="fa-solid fa-angle-down"></i>
+                    <ul class="navigation-child">
+                        <li><a href="#">Thông tin GS/PGS</a></li>
+                        <li><a href="#">Các đơn vị nghiên cứu</a></li>
+                        <li><a href="#">Tạp chí</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="btn-login" href="#">
+                <span>ĐĂNG NHẬP</span>
+            </a>
+        </section>
+        <section id="page-title-bar">
+            <div class="container__breadcrumb-brand">
+                <div class="breadcrumb">
+                    <span>
+                        <span><a href="./index.html">Trang chủ</a></span>
+                        »
+                        <span id="breadcrumb__last"></span>
+                    </span>
+                </div>
+                <div class="brand">
+                    <span class="animate__animated animate__fadeIn">X</span>
+                    <span class="animate__animated animate__fadeIn">u</span>
+                    <span class="animate__animated animate__fadeIn">â</span>
+                    <span class="animate__animated animate__fadeIn">n</span>
+                    <span class="animate__animated animate__fadeIn">&nbsp;</span>
+                    <span class="animate__animated animate__fadeIn">H</span>
+                    <span class="animate__animated animate__fadeIn">u</span>
+                    <span class="animate__animated animate__fadeIn">y</span>
+                </div>
+            </div>
+            <div class="fluid-wrapper">
+                <div class="fluid-shape"></div>
+                <div class="fluid-shape"></div>
+                <div class="fluid-shape"></div>
+            </div>
+        </section>
+    </header>
+    <main id="body-wrapper">
+        <section id="table_students-management">
+            <h2 style="text-align: center;" class="title" id="goto__ms">Quản Lý Sinh Viên</h2>
+            <h4>Thông tin chi tiết Sinh Viên:</h4>
+            <div class="student-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Full Name</td>
+                            <td>Date of Birth</td>
+                            <td>Address</td>
+                            <td>PhoneNumber</td>
+                            <td>Entry Point</td>
+                        </tr>
+                    </thead>
+                    <tbody id="body-tbl__student-list">
+                        <tr>
+                            <td>ID</td>
+                            <td>Full Name</td>
+                            <td>Date of Birth</td>
+                            <td>Address</td>
+                            <td>PhoneNumber</td>
+                            <td>Entry Point</td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>Full Name</td>
+                            <td>Date of Birth</td>
+                            <td>Address</td>
+                            <td>PhoneNumber</td>
+                            <td>Entry Point</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="option-btns">
+                    <button class="btn-update" id="edit-student__popup">Update Student</button>
+                    <button class="btn-add" id="open-popup">Add Student</button>
+                    <button class="btn-del">Delete Student</button>
+                </div>
+            </div>
+        </section>
+        <section id="popup__add-student">
+            <div class="animate__animated animate__zoomIn" id="container-popup">
+                <div id="popup-top">
+                    <h1>Add new students</h1>
+                    <span id="popup-logo"><img src="./assets/images/logo.png" alt=""></span>
+                    <span id="close-popup">×</span>
+                </div>
+                <div class="content-popup">
+                    <div class="info-basic container-forms">
+                        <h3>Thông tin cơ bản:</h3>
+                        <form action="" class="myForm" id="formInfoBasic">
+                            <div class="formItems">
+                                <label for="id">ID (*):</label>
+                                <input type="text" class="inputForms id" id="id">
+                            </div>
+                            <div class="formItems">
+                                <label for="fullName">Full Name (*):</label>
+                                <input type="text" class="inputForms lastName" id="lastName">
+                            </div>
+                            <div class="formItems">
+                                <label for="date"> Date of Birth:</label>
+                                <input type="date" class="inputForms date" id="date">
+                            </div>
+                            <div class="formItems">
+                                <label for="entryPoint">Entry Point:</label>
+                                <input type="number" class="inputForms entryPoint" id="entryPoint">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info-contact container-forms">
+                        <h3>Thông tin liên hệ:</h3>
+                        <form action="" class="myForm" id="formInfoContact">
+                            <div class="formItems">
+                                <label for="phoneNumer">Phone Number (*):</label>
+                                <input type="tel" maxlength="11" class="inputForms phoneNumer" id="phoneNumer" >
+                            </div>
+                            <div class="formItems">
+                                <label for="address">Address:</label>
+                                <textarea name="address" id="address" class="inputForms address" maxlength="200"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button id="popup-add">Add Student</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../unit-5/assets/js/validate-forms.js"></script>
+<script src="../unit-5/assets/js/main.js"></script>
+</html>

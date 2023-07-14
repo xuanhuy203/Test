@@ -1,0 +1,77 @@
+CÁC THẺ HTML THÔNG DỤNG:
+
+1.) Thẻ Tiêu Đề (Heading)
+    KH: <h1></h1> --> <h6></h6>.
+
+2.) Thẻ văn bản (Paragraph) 
+    KH: <p></p>.
+- Văn bản trong thẻ được hiểu là một đoạn, mỗi đoạn được xuống dòng.
+
+3.) Thẻ pre (performatted text) 
+- Hiển thị văn bản có độ lớn cố định (vì không chịu ảnh hưởng bởi các định dạng làm to hay thu nhỏ, hay bất kỳ định dạng nào).
+
+4.) Thẻ Danh Sách (List)
+- Thẻ danh sách không có thứ tự:
+    KH: <ul></ul>--(unorder list): Mỗi mục bắt đầu bằng thẻ <li>.
+- Thẻ danh sách có thứ tự:
+    KH: <ol></ol>--<order list>: Mỗi mục bắt đầu bằng thẻ <li>.
+- Ex: type = "A", "a", ...
+
+5.) Thẻ tạo bảng (Table)
+- Mỗi hàng trong bảng được xác định = thẻ: <tr></tr> (table row)
+- Mỗi tiêu đề bảng được xác định bằng thẻ: <th></th>--(table header)
+- Mỗi ô dữ liệu (cell) được xác định bằng thẻ: <td></td>--(table data)  
+- chú thích bảng bằng thẻ: <caption>
+
+6.) Thẻ liên kết(links) <a> (anchor: điểm neo)
+    KH: <a></a>
+- Thuộc tính: 
+    +) href(Hypertext Reference) : xác định đường liên kết
+    +) dowload: bấm vào liên kết ==> tài nguyên liên kết sẽ đc dowload
+    +) target: chỉ định nơi mở liên kết...
+
+7.) Thẻ div
+- Thẻ div: chứa hoặc xác định 1 phần trong HTML
+
+8.) Thẻ Tiêu đề trang web 
+    KH: <title></title>
+
+9.) Thẻ Chữ Đậm(Bold)
+    KH: <b></b>
+
+10.) Thẻ Chữ Nghiêng(Italic)
+    KH: <i></i>
+
+11.) Thẻ Gạch chân chữ(underline)
+    KH: <u></u>
+
+12.) Thẻ căn giữa(center)
+    KH: <center></center>
+
+13.) Thẻ span
+    KH: <span></span>
+- Thẻ span, <span>, là vùng chứa nội tuyến chung không có kiểu mặc định.
+- Bạn có thể sử dụng thẻ span để nhóm các văn bản mà bạn muốn tạo kiểu.
+
+14.) Thẻ xuống dòng: ()
+    KH: <br> 
+
+15.) Thẻ chỉ số trên (mũ) sup
+    KH: <sup></sup> : 
+- Ex: x2
+
+16.) Thẻ chỉ số dưới (mũ) sub
+    KH: <sub></sub>
+- Ex: H20
+
+17.) Thẻ chèn ảnh: images 
+    KH: <img></img>
+
+18.) Thẻ tạo form
+    KH: <form></form>
+
+19.) Thẻ chèn video audio 
+    KH: <video></video>
+
+20.) Thẻ chú thích html
+    KH: <--!-->

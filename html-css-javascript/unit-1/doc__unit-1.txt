@@ -1,0 +1,142 @@
+==========CÁC THUỘC TÍNH CSS THƯỜNG DÙNG==========
+
+1. CSS về Backgrounds:
+    - Background-color: màu nền.
+    - Background-image: nền bằng ảnh.
+    - Background-repeat: lặp lại ảnh Background khi kích thước nền > kích thước ảnh.
+    - Background-position: vị trí bắt đầu của Background-image.
+
+    - Background (Shorthand property): "Background-color"__"Background-image"__"Background-repeat"__"Background-position";
+
+
+2. CSS về Borders:
+    - Border-style: kiểu đường viền hiển thị.
+    - Border-Width: chiều rộng, độ rộng của đường viền.
+    - Border-color: màu của đường viền.
+
+    - Border (Shorthand property): "border-Width"__"border-style"__"border-color";
+
+
+3. CSS Margins:
+    - Margin-top: căn lề trên.
+    - Margin-right: căn lề phải.
+    - Margin-bottom: căn lề dưới.
+    - Margin-left: căn lề trái
+
+    - Margin(Shorthand-property): "margin-top, margin-bottom"__"margin-left, margin-right";
+
+
+4. CSS Padding:
+    - Padding-top: vùng đệm trên.
+    - Padding-right: vùng đệm phải.
+    - Padding-bottom: vùng đệm dưới.
+    - Padding-left: vùng đệm trái
+
+    - Padding(Shorthand-property) 2at: "Padding-top, Padding-bottom"__"Padding-left, Padding-right";
+    - Padding(Shorthand-property) 4at: "Padding-top"__"Padding-right"__"Padding-bottom"__"Padding-left";
+ 
+
+5. CSS Height/ Width:
+    - Height: chiều cao của 1 phần tử.
+    - Width: chiều rộng của 1 phần tử.
+    - Max-Width: chiều rộng tối đa của 1 phần tử.
+
+
+6. CSS Text:
+    - Text-color: màu chữ.
+    - Text-align: căn lề chữ.
+    - Text-indent: thụt vào lề.
+    - Text-decoration: định dạng chữ: gạch chân dưới, gạch trên chữ, gạch ngang chữ...
+    - Text-transform: upercase: VIẾT HOA CÁC CHỮ CÁI, lowercase, capitalize: Viết Hoa Chữ Cái Đầu...
+    - Line-height: độ cao của 1 dòng.
+
+
+7. CSS position
+    - Position: relative ; vị trí tương đối.
+    - Position: absolute ; vị trí tuyệt đối.
+    - Position: fixed ; vị trí cố định.
+    - Position: sticky ; vị trí dính (một số trình duyệt không hỗ trợ).
+
+
+8. CSS z-index, opacity: 
+    - z-index: giống layer.
+    - opacity: độ mờ đục của đối tượng: mặc định 100.
+
+
+9. CSS Flexbox: display: flex;
+    - Justify-content: căn chỉnh nội dung theo trục x.
+    - Align-content: căn chỉnh nội dung theo trục y.
+    - Flex-direction: hướng của flex: colums, row(default).
+    - Flex-wrap: điều khiển flex-container 1 dòng hoặc nhiều dòng.
+    - Flex-shrink: căn chỉnh kích thước của 1 đối tượng(flex-item).
+
+
+10. CSS Grid: display: grid
+    - track-line: là đường giữa các colums hoặc các rows, bắt đầu từ 1---n.
+
+    - Grid CONTAINER:
+        + Grid-template-colums: định nghĩa số cột và kích thước mỗi cột.
+        + Grid-template-rows: định nghĩa số dòng và kích thước mỗi dòng.
+        + Justify-content: căn chỉnh nội dung trục x: giống flexbox.
+        + Align-content: căn chỉnh nội dung trục x: giống flexbox.
+
+    - Grid ITEM:
+        + 1/5: track-line 1 --> track-line 5
+        + Grid-colums: chỉ định chiều rộng(colums) của 1 grid-item: EX: Grid-colums: 1/5--chiều rộng cột từ track-line số 1 --> 5.
+        + Grid-rows: chỉ định chiều cao(rows) của 1 grid-item: EX: Grid-colums: 1/2--chiều cao cột từ track-line số 1 --> 2.
+
+    - Grid AREA:
+        + Grid-area: grid-colums/ grid-rows:  1/3/2/4:  Width = 1/3; height = 2/4;
+        + Grid-template-area: (4col, 3row) 
+            'header header header header'
+            'menu main main main right'
+            'menu footer footer footer';
+
+
+
+==========REPONSIVE--HTML SEMANTIC ELEMENTS--BEM==========
+
+11. Reponsive: khi thay đổi size các phần tử vẫn đồng bộ và cố định hoặc thay đổi phù hợp.
+    - 3 type: + all(gồm screen, print).
+              + screen: màn hình.
+              + print: kiểu: in
+
+    - CÚ PHÁP: @media only all/screen/print and (condition: điều kiện: max-with: 600px/ min-with: 600px)
+
+    - EX: @media only all and ( max-with: 600px/ min-with: 600px)---Reponsive với màn hình có with < 600px or > 600px.
+        {
+            Background-color: black;
+        }
+
+
+12. BEM: Blocks__Elem--Modifier
+    - Blocks: chứa elements
+    - Elements: chứa nhiều elements--modifier
+    - Modifier: khi 1 elem thay đổi trạng thái...
+
+    - EX: Blocks__elem--modifier(clicked, hover, active...)
+
+
+13. HTML Semantic elements
+    - Non-semantic: không có ngữ nghĩa: ex: div, span...
+    - Semantic: có nghĩa: 
+        + <article>: bài viết 
+        + <aside>: 1 bên
+        + <details>: chi tiết
+        + <figcaption>: chú thích hình/ phụ đề
+        + <figure>: 
+        + <footer>  
+        + <header>
+        + <main>:
+        + <mark>: đánh dấu
+        + <nav>:
+        + <section>:
+        + <summary>: bản tóm tắt
+        + <time>:
+
+
+14. #Các cách đặt tên trong lập trình:
+    snake_case, ví dụ: number_of_donuts, NUMBER_OF_DONUTS,....
+    kebab-case, ví dụ: number-of-donuts, full-name
+    camelCase, ví dụ: numberOfDonuts, fullName
+    PascalCase: ví dụ: NumberOfDonuts, FullName
